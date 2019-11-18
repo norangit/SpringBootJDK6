@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <!-- Inherit defaults from Spring Boot -->
@@ -14,6 +12,7 @@
     <groupId>com.jll</groupId>
     <artifactId>SpringBootJDK6</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,9 +21,8 @@
         <java.version>1.6</java.version>
         <log4j2.version>2.3</log4j2.version>
         <tomcat.version>7.0.59</tomcat.version>
-        <jackson.version>2.6</jackson.version>
+        <jackson.version>2.6.7</jackson.version>
     </properties>
-
 
     <dependencies>
         <dependency>
@@ -73,7 +71,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
-            <!--            <scope>provided</scope>-->
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -84,15 +82,15 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-cache</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-acl</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-test</artifactId>
-            <scope>test</scope>
-        </dependency>
+        <!-- <dependency>
+             <groupId>org.springframework.security</groupId>
+             <artifactId>spring-security-acl</artifactId>
+         </dependency>
+         <dependency>
+             <groupId>org.springframework.security</groupId>
+             <artifactId>spring-security-test</artifactId>
+             <scope>test</scope>
+         </dependency>-->
         <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-log4j2</artifactId>
@@ -106,6 +104,12 @@
             <groupId>org.ehcache</groupId>
             <artifactId>ehcache</artifactId>
             <version>3.5.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-legacy</artifactId>
+            <version>1.1.0.RELEASE</version>
         </dependency>
 
         <!--<dependency>
@@ -123,5 +127,13 @@
             </plugin>
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>mvnrepository11</id>
+            <name>mvnrepository11</name>
+            <url>https://mvnrepository.com/artifact</url>
+        </repository>
+    </repositories>
 
 </project>

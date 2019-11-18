@@ -22,4 +22,10 @@ public class BookController {
         this.bookService.findById();
         return "Hello SpringBoot JDK 1.6";
     }
+
+    @RequestMapping("/c")
+    public String test3(){
+//        this.bookService.findById();
+        return "h.html";
+    }
 }
